@@ -5,25 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>כיוון C — מודרני · Queen נדל״ן</title>
-<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/base.css?v=5">
 <style>
   :root { --bg: #FFFFFF; --bg-2: #F8F3F6; --ink: #1B1020; --ink-soft: #62536A; --line: #ECE3E9; --blush: #F3E6EE; --gutter: max(20px, calc((100vw - 1200px) / 2)); --sh: 0 24px 60px -28px rgba(66, 4, 31, .35); }
   body { background: var(--bg); color: var(--ink); }
 
-  .top { position: sticky; inset-block-start: 0; z-index: 50; background: rgba(255, 255, 255, .94); border-block-end: 1px solid var(--line); }
-  .top-in { display: flex; align-items: center; gap: 2rem; min-block-size: 76px; padding-inline: var(--gutter); }
-  .logo { background: var(--burgundy); border-radius: 14px; padding: .45rem .9rem; display: block; }
-  .logo img { inline-size: 96px; block-size: auto; }
-  .nav { display: flex; gap: .4rem; margin-inline-start: auto; font-weight: 600; font-size: .98rem; }
+  :root { --sheet-bg: var(--burgundy); --sheet-font: var(--sans); --sheet-weight: 800; --sheet-radius: 999px; --sheet-line: rgba(255, 255, 255, .18); }
+  .top { position: sticky; inset-block-start: 12px; z-index: 50; margin-block-start: 12px; padding-inline: var(--gutter); }
+  .top-in { display: flex; align-items: center; gap: 1.2rem; min-block-size: 68px; padding-inline: .6rem; background: rgba(255, 255, 255, .97); border: 1px solid var(--line); border-radius: 999px; box-shadow: 0 18px 40px -26px rgba(66, 4, 31, .4); }
+  .logo { background: var(--burgundy); border-radius: 999px; padding: .55rem 1.2rem; display: block; }
+  .logo img { inline-size: 92px; block-size: auto; }
+  .nav { display: flex; gap: .3rem; margin-inline: auto; font-weight: 600; font-size: .98rem; }
   .nav a { padding: .5rem .9rem; border-radius: 999px; transition: background .25s; } .nav a:hover { background: var(--bg-2); }
   .pill { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border-radius: 999px; padding: .8rem 1.6rem; font-weight: 700; border: 0; transition: transform .25s var(--ease), box-shadow .25s, background .25s; }
   .pill:hover { transform: translateY(-2px); }
   .pill-main { background: var(--burgundy); color: #fff; box-shadow: 0 12px 26px -12px rgba(94, 7, 54, .7); } .pill-main:hover { background: #74104a; }
   .pill-gold { background: var(--gold-light); color: var(--ink-burgundy); }
   .pill-ghost { background: var(--bg-2); color: var(--ink); }
-  .burger { display: none; inline-size: 44px; block-size: 44px; border-radius: 14px; border: 1px solid var(--line); background: #fff; position: relative; margin-inline-start: auto; }
-  .burger::before, .burger::after { content: ''; position: absolute; inset-inline: 12px; block-size: 2px; border-radius: 2px; background: var(--ink); }
-  .burger::before { inset-block-start: 16px; } .burger::after { inset-block-end: 16px; }
+  .burger { background: var(--bg-2); border-radius: 999px; padding-inline: 1.1rem; min-block-size: 48px; } .burger i { border-block-width: 2px; }
 
   /* ---------- הירו ---------- */
   .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 3.5rem; align-items: center; padding-inline: var(--gutter); padding-block: 4.5rem 5.5rem; background: radial-gradient(60% 80% at 15% 30%, var(--blush), transparent 70%); }
@@ -102,7 +101,7 @@
   footer { padding: 1.5rem var(--gutter) 5.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: .9rem; color: var(--ink-soft); }
 
   @media (max-width: 1000px) {
-    .nav, .top .pill { display: none; } .burger { display: block; }
+    .nav, .top .pill { display: none; } .burger { display: inline-flex; }
     .hero { grid-template-columns: 1fr; padding-block: 2.6rem 3.5rem; gap: 3rem; }
     .board-wrap { inline-size: min(84%, 420px); } .mini { inline-size: 160px; } .mini.m1 { inset-inline-end: -8%; } .mini.m2 { inset-inline-start: -8%; }
     .grid { grid-template-columns: 1fr; }
@@ -118,7 +117,7 @@
     <a class="logo" href="#"><img src="assets/logo-queen.png" alt="Queen Real Estate" width="301" height="137"></a>
     <nav class="nav" aria-label="ניווט ראשי"><a href="#listings">למכירה</a><a href="#listings">להשכרה</a><a href="#process">איך זה עובד</a><a href="#about">הכירו את <span lang="en">Queen</span></a><a href="#about">צרו קשר</a></nav>
     <a class="pill pill-main" href="#about">מוכרים דירה?</a>
-    <button class="burger" aria-label="תפריט"></button>
+    <button class="burger" type="button" aria-label="פתיחת התפריט" aria-expanded="false" aria-controls="sheet"><span>תפריט</span><i aria-hidden="true"></i></button>
   </div>
 </header>
 
@@ -153,13 +152,13 @@
     <div class="chips" id="chips"><button type="button" aria-pressed="true" data-f="all">הכול</button><button type="button" aria-pressed="false" data-f="sale">למכירה</button><button type="button" aria-pressed="false" data-f="rent">להשכרה</button></div>
   </div>
   <div class="grid">
-    <article class="card" data-t="sale"><figure><img src="assets/img/living-stairs-800.jpg" alt="" loading="lazy"><div class="tagrow"><span class="tag b">בלעדיות</span><span class="tag s">להמחשה</span></div></figure>
+    <article class="card" data-t="sale"><figure><img src="assets/img/living-stairs-800.jpg" alt=""><div class="tagrow"><span class="tag b">בלעדיות</span><span class="tag s">להמחשה</span></div></figure>
       <div class="body"><span class="hood">אחוזה · רעננה</span><div class="price"><bdi dir="ltr">4,250,000</bdi><span class="cur">₪</span></div><h3>דירת 5 חדרים משופצת אדריכלית</h3>
       <ul class="facts"><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 16V8l7-5 7 5v8z"/></svg>5 חד׳</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 3h14v14H3zM3 9h6M9 3v6"/></svg>128 מ״ר</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 17V6h5v11M9 17V3h7v14M2 17h16"/></svg>קומה 3/6</li></ul></div></article>
-    <article class="card" data-t="sale"><figure><img src="assets/img/kitchen-island-800.jpg" alt="" loading="lazy"><div class="tagrow"><span class="tag b">בלעדיות</span><span class="tag s">להמחשה</span></div></figure>
+    <article class="card" data-t="sale"><figure><img src="assets/img/kitchen-island-800.jpg" alt=""><div class="tagrow"><span class="tag b">בלעדיות</span><span class="tag s">להמחשה</span></div></figure>
       <div class="body"><span class="hood">רעננה הירוקה</span><div class="price"><bdi dir="ltr">7,650,000</bdi><span class="cur">₪</span></div><h3>פנטהאוז דופלקס 6 חדרים</h3>
       <ul class="facts"><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 16V8l7-5 7 5v8z"/></svg>6 חד׳</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 3h14v14H3zM3 9h6M9 3v6"/></svg>185 מ״ר</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 17V6h5v11M9 17V3h7v14M2 17h16"/></svg>קומה 7/8</li></ul></div></article>
-    <article class="card" data-t="rent"><figure><img src="assets/img/living-tall-windows-800.jpg" alt="" loading="lazy"><div class="tagrow"><span class="tag">להשכרה</span><span class="tag s">להמחשה</span></div></figure>
+    <article class="card" data-t="rent"><figure><img src="assets/img/living-tall-windows-800.jpg" alt=""><div class="tagrow"><span class="tag">להשכרה</span><span class="tag s">להמחשה</span></div></figure>
       <div class="body"><span class="hood">לב הפארק</span><div class="price"><bdi dir="ltr">11,500</bdi><span class="cur">₪ לחודש</span></div><h3>מיני פנטהאוז 5 חדרים מול הפארק</h3>
       <ul class="facts"><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 16V8l7-5 7 5v8z"/></svg>5 חד׳</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 3h14v14H3zM3 9h6M9 3v6"/></svg>135 מ״ר</li><li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 17V6h5v11M9 17V3h7v14M2 17h16"/></svg>קומה 9/10</li></ul></div></article>
   </div>
@@ -201,5 +200,6 @@
   const chips = [...document.querySelectorAll('#chips button')];
   chips.forEach((c) => c.addEventListener('click', () => { chips.forEach((x) => x.setAttribute('aria-pressed', String(x === c))); document.querySelectorAll('.card').forEach((card) => { card.hidden = !(c.dataset.f === 'all' || card.dataset.t === c.dataset.f); }); }));
 </script>
+<script src="assets/menu.js?v=5"></script>
 </body>
 </html>

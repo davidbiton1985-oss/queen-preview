@@ -5,24 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>כיוון A — עריכתי · Queen נדל״ן</title>
-<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/base.css?v=5">
 <style>
   :root { --paper: #FBF8F3; --paper-2: #F3EDE3; --ink: #1F1419; --ink-soft: #5A4A52; --hair: rgba(94, 7, 54, .16); --gutter: max(24px, calc((100vw - 1240px) / 2)); }
   body { background: var(--paper); color: var(--ink); }
 
   /* ---------- מסטהד ---------- */
-  .mast { background: var(--burgundy); color: #F6EDE4; position: sticky; inset-block-start: 0; z-index: 50; }
-  .mast-in { display: flex; align-items: center; gap: 2.5rem; min-block-size: 84px; padding-inline: var(--gutter); }
-  .mast img { inline-size: 138px; block-size: auto; }
-  .nav { display: flex; gap: 2.1rem; margin-inline-start: auto; font-size: 1rem; }
+  .util { background: var(--burgundy-deep); color: rgba(246, 237, 228, .8); font-size: .85rem; }
+  .util-in { display: flex; align-items: center; justify-content: space-between; min-block-size: 38px; padding-inline: var(--gutter); }
+  .util-end { display: flex; align-items: center; gap: 1.7rem; } .util a { transition: color .3s; } .util a:hover { color: var(--gold-light); }
+  .mast { background: var(--burgundy); color: #F6EDE4; position: sticky; inset-block-start: 0; z-index: 50; border-block-end: 1px solid rgba(212, 185, 120, .4); }
+  .mast-in { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 2rem; min-block-size: 84px; padding-inline: var(--gutter); }
+  .brand { justify-self: center; } .brand img { inline-size: 150px; block-size: auto; }
+  .nav { display: flex; gap: 2.1rem; font-size: 1rem; }
+  .nav-end { display: flex; align-items: center; gap: 2.1rem; justify-self: end; }
   .nav a { position: relative; padding-block: .4rem; opacity: .92; }
   .nav a::after { content: ''; position: absolute; inset-inline: 0; inset-block-end: 0; block-size: 1px; background: var(--gold-light); transform: scaleX(0); transform-origin: right; transition: transform .4s var(--ease); }
   .nav a:hover::after { transform: scaleX(1); }
   .mast-cta { border: 1px solid rgba(212, 185, 120, .7); color: var(--gold-light); padding: .6rem 1.4rem; font-weight: 600; transition: background .3s, color .3s; }
   .mast-cta:hover { background: var(--gold-light); color: var(--ink-burgundy); }
-  .burger { display: none; inline-size: 44px; block-size: 44px; border: 1px solid rgba(212, 185, 120, .55); background: none; position: relative; margin-inline-start: auto; }
-  .burger::before, .burger::after { content: ''; position: absolute; inset-inline: 12px; block-size: 1.5px; background: #F6EDE4; }
-  .burger::before { inset-block-start: 17px; } .burger::after { inset-block-end: 17px; }
+  @media (max-width: 1140px) { .util, .nav, .nav-end { display: none; } .mast-in { display: flex; min-block-size: 76px; } .brand img { inline-size: 124px; } .burger { display: inline-flex; } }
 
   /* ---------- הירו ---------- */
   .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.22fr); min-block-size: calc(100vh - 84px); position: relative; }
@@ -104,7 +106,6 @@
   footer { padding: 2.2rem var(--gutter) 5.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: .9rem; color: var(--ink-soft); }
 
   @media (max-width: 1000px) {
-    .nav, .mast-cta { display: none; } .burger { display: block; }
     .hero { grid-template-columns: 1fr; min-block-size: 0; }
     .hero-text { padding: 3.2rem 24px 2.6rem; }
     .hero-photo { min-block-size: 0; }
@@ -119,14 +120,13 @@
 </style>
 </head>
 <body>
+<div class="util"><div class="util-in"><span>רעננה · תיווך בוטיק · הילה ושמרית</span><span class="util-end"><a href="tel:+972500000000" dir="ltr">050-000-0000</a><a href="#" lang="en" dir="ltr">English</a></span></div></div>
 <header class="mast">
   <div class="mast-in">
-    <a href="#"><img src="assets/logo-queen.png" alt="Queen Real Estate" width="301" height="137"></a>
-    <nav class="nav" aria-label="ניווט ראשי">
-      <a href="#listings">דירות למכירה</a><a href="#listings">דירות להשכרה</a><a href="#about">הכירו את <span lang="en">Queen</span></a><a href="#about">לקוחות מספרים</a><a href="#about">צרו קשר</a>
-    </nav>
-    <a class="mast-cta" href="#about">מוכרים דירה?</a>
-    <button class="burger" aria-label="תפריט"></button>
+    <nav class="nav" aria-label="ניווט ראשי"><a href="#listings">דירות למכירה</a><a href="#listings">דירות להשכרה</a><a href="#about">הכירו את <span lang="en">Queen</span></a></nav>
+    <a class="brand" href="#"><img src="assets/logo-queen.png" alt="Queen Real Estate" width="301" height="137"></a>
+    <div class="nav-end"><nav class="nav" aria-label="ניווט משני"><a href="#about">לקוחות מספרים</a><a href="#about">צרו קשר</a></nav><a class="mast-cta" href="#about">מוכרים דירה?</a></div>
+    <button class="burger" type="button" aria-label="פתיחת התפריט" aria-expanded="false" aria-controls="sheet"><span>תפריט</span><i aria-hidden="true"></i></button>
   </div>
 </header>
 
@@ -162,21 +162,21 @@
   </div>
   <div class="grid">
     <article class="card">
-      <figure><img src="assets/img/living-white-800.jpg" alt="" loading="lazy"><figcaption>צילום להמחשה</figcaption></figure>
+      <figure><img src="assets/img/living-white-800.jpg" alt=""><figcaption>צילום להמחשה</figcaption></figure>
       <div class="meta"><span>נווה זמר</span><span>בלעדיות</span></div>
       <h3>דירת גן 4 חדרים בנווה זמר</h3>
       <p class="specs">4 חדרים · 105 מ״ר · קומת גן · ממ״ד</p>
       <div class="card-foot"><span class="price"><bdi dir="ltr">3,980,000</bdi><span class="cur">₪</span></span><a class="link" href="#">לפרטים</a></div>
     </article>
     <article class="card">
-      <figure><img src="assets/img/kitchen-island-800.jpg" alt="" loading="lazy"><figcaption>צילום להמחשה</figcaption></figure>
+      <figure><img src="assets/img/kitchen-island-800.jpg" alt=""><figcaption>צילום להמחשה</figcaption></figure>
       <div class="meta"><span>רעננה הירוקה</span><span>בלעדיות</span></div>
       <h3>פנטהאוז דופלקס 6 חדרים</h3>
       <p class="specs">6 חדרים · 185 מ״ר · קומה 7 מתוך 8 · מרפסת גג</p>
       <div class="card-foot"><span class="price"><bdi dir="ltr">7,650,000</bdi><span class="cur">₪</span></span><a class="link" href="#">לפרטים</a></div>
     </article>
     <article class="card">
-      <figure><img src="assets/img/bedroom-elegant-800.jpg" alt="" loading="lazy"><figcaption>צילום להמחשה</figcaption></figure>
+      <figure><img src="assets/img/bedroom-elegant-800.jpg" alt=""><figcaption>צילום להמחשה</figcaption></figure>
       <div class="meta"><span>לב הפארק</span><span>להשכרה</span></div>
       <h3>מיני פנטהאוז 5 חדרים מול הפארק</h3>
       <p class="specs">5 חדרים · 135 מ״ר · קומה 9 מתוך 10</p>
@@ -192,7 +192,7 @@
     <p>אין אצלנו ״נציג מטעם״. הילה ושמרית איתכם בעצמן: הערכת שווי כנה, הכנה וצילום מקצועי, שיווק לקהל המדויק, ומשא ומתן עם נתונים וקור רוח.</p>
     <a class="btn btn-gold" href="#">לתיאום שיחת היכרות</a>
   </div>
-  <div class="st-photo"><img src="assets/img/bedroom-elegant-800.jpg" alt="" loading="lazy"></div>
+  <div class="st-photo"><img src="assets/img/bedroom-elegant-800.jpg" alt=""></div>
 </section>
 <footer><span>© 2026 · Queen נדל״ן — תיווך ברעננה</span><span>מוקאפ כיוון עיצובי · התוכן והצילומים להמחשה</span></footer>
 
@@ -205,5 +205,6 @@
     addEventListener('scroll', () => { if (raf) return; raf = requestAnimationFrame(() => { raf = 0; img.style.translate = `0 ${Math.min(scrollY, 900) * 0.06}px`; }); }, { passive: true });
   }
 </script>
+<script src="assets/menu.js?v=5"></script>
 </body>
 </html>

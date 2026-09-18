@@ -5,21 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>כיוון B — תכשיט כהה · Queen נדל״ן</title>
-<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/base.css?v=5">
 <style>
   :root { --bg: #14020B; --panel: #1E0612; --text: #F3E9EC; --text-soft: rgba(243, 233, 236, .72); --hair: rgba(212, 185, 120, .24); --gutter: max(24px, calc((100vw - 1240px) / 2)); }
   body { background: var(--bg); color: var(--text); }
 
+  :root { --sheet-bg: #14020B; }
   .top { position: absolute; inset-inline: 0; inset-block-start: 0; z-index: 20; }
-  .top-in { display: flex; align-items: center; gap: 2.4rem; min-block-size: 92px; padding-inline: var(--gutter); }
-  .top img { inline-size: 132px; block-size: auto; }
-  .nav { display: flex; gap: 2rem; margin-inline-start: auto; font-size: .98rem; color: var(--text-soft); }
-  .nav a { transition: color .3s; } .nav a:hover { color: var(--gold-light); }
-  .top-cta { border: 1px solid var(--hair); color: var(--gold-light); padding: .6rem 1.4rem; font-weight: 600; transition: border-color .3s, background .3s; }
-  .top-cta:hover { border-color: var(--gold-light); background: rgba(212, 185, 120, .08); }
-  .burger { display: none; inline-size: 44px; block-size: 44px; border: 1px solid var(--hair); background: none; position: relative; margin-inline-start: auto; }
-  .burger::before, .burger::after { content: ''; position: absolute; inset-inline: 12px; block-size: 1.5px; background: var(--text); }
-  .burger::before { inset-block-start: 17px; } .burger::after { inset-block-end: 17px; }
+  .top-in { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 2rem; min-block-size: 96px; margin-inline: var(--gutter); border-block-end: 1px solid rgba(212, 185, 120, .14); }
+  .brand { justify-self: start; } .brand img { inline-size: 136px; block-size: auto; }
+  .nav { display: flex; gap: 2.2rem; font-size: .95rem; color: var(--text-soft); }
+  .nav a { position: relative; padding-block: .5rem; transition: color .3s; } .nav a:hover { color: var(--gold-light); }
+  .nav a::after { content: ''; position: absolute; inset-inline: 0; inset-block-end: 0; block-size: 1px; background: var(--gold-light); transform: scaleX(0); transition: transform .4s var(--ease); }
+  .nav a:hover::after { transform: scaleX(1); }
+  .top-end { justify-self: end; display: flex; align-items: center; gap: 1.6rem; }
+  .top-tel { font-size: .92rem; color: var(--text-soft); font-variant-numeric: lining-nums; transition: color .3s; } .top-tel:hover { color: var(--gold-light); }
+  .top-cta { border: 1px solid rgba(212, 185, 120, .55); color: var(--gold-light); padding: .6rem 1.4rem; font-weight: 600; transition: border-color .3s, background .3s, color .3s; }
+  .top-cta:hover { background: var(--gold-light); color: var(--bg); }
+  @media (max-width: 1240px) { .top-tel { display: none; } }
+  @media (max-width: 1140px) { .nav, .top-end { display: none; } .top-in { display: flex; min-block-size: 76px; border: 0; } .brand img { inline-size: 124px; } .burger { display: inline-flex; } }
 
   /* ---------- הירו: המלכה כתכשיט ---------- */
   .hero { position: relative; min-block-size: 100vh; min-block-size: 100svh; display: grid; align-items: center; overflow: hidden; isolation: isolate; }
@@ -76,7 +80,6 @@
   footer { border-block-start: 1px solid var(--hair); padding: 2rem var(--gutter) 5.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: .9rem; color: var(--text-soft); }
 
   @media (max-width: 1000px) {
-    .nav, .top-cta { display: none; } .burger { display: block; }
     .top-in { min-block-size: 76px; }
     .hero { align-items: start; }
     .hero-text { padding: 7rem 24px 46vh; gap: 1.2rem; max-inline-size: none; }
@@ -92,10 +95,10 @@
 <body>
 <header class="top">
   <div class="top-in">
-    <a href="#"><img src="assets/logo-queen.png" alt="Queen Real Estate" width="301" height="137"></a>
+    <a class="brand" href="#"><img src="assets/logo-queen.png" alt="Queen Real Estate" width="301" height="137"></a>
     <nav class="nav" aria-label="ניווט ראשי"><a href="#listings">דירות למכירה</a><a href="#listings">דירות להשכרה</a><a href="#about">הכירו את <span lang="en">Queen</span></a><a href="#about">לקוחות מספרים</a><a href="#about">צרו קשר</a></nav>
-    <a class="top-cta" href="#about">מוכרים דירה?</a>
-    <button class="burger" aria-label="תפריט"></button>
+    <div class="top-end"><a class="top-tel" href="tel:+972500000000" dir="ltr">050-000-0000</a><a class="top-cta" href="#about">מוכרים דירה?</a></div>
+    <button class="burger" type="button" aria-label="פתיחת התפריט" aria-expanded="false" aria-controls="sheet"><span>תפריט</span><i aria-hidden="true"></i></button>
   </div>
 </header>
 
@@ -117,13 +120,13 @@
     <a class="link" href="#">לכל הנכסים <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 8H2M6.5 3.5 2 8l4.5 4.5"/></svg></a>
   </div>
   <div class="mosaic">
-    <a class="tile" href="#"><img src="assets/img/bedroom-marble-1600.jpg" alt="" loading="lazy"><span class="tag">צילום להמחשה</span>
+    <a class="tile" href="#"><img src="assets/img/bedroom-marble-1600.jpg" alt=""><span class="tag">צילום להמחשה</span>
       <small>רעננה הירוקה · בלעדיות</small><h3>פנטהאוז דופלקס 6 חדרים עם מרפסת גג</h3>
       <div class="row"><span>6 חדרים · 185 מ״ר · קומה 7 מתוך 8</span><span class="price"><bdi dir="ltr">7,650,000</bdi><span class="cur">₪</span></span></div></a>
-    <a class="tile" href="#"><img src="assets/img/dining-green-800.jpg" alt="" loading="lazy"><span class="tag">צילום להמחשה</span>
+    <a class="tile" href="#"><img src="assets/img/dining-green-800.jpg" alt=""><span class="tag">צילום להמחשה</span>
       <small>אחוזה · בלעדיות</small><h3>דירת 5 חדרים משופצת אדריכלית</h3>
       <div class="row"><span>5 חדרים · 128 מ״ר</span><span class="price"><bdi dir="ltr">4,250,000</bdi><span class="cur">₪</span></span></div></a>
-    <a class="tile" href="#"><img src="assets/img/living-tall-windows-800.jpg" alt="" loading="lazy"><span class="tag">צילום להמחשה</span>
+    <a class="tile" href="#"><img src="assets/img/living-tall-windows-800.jpg" alt=""><span class="tag">צילום להמחשה</span>
       <small>לב הפארק · להשכרה</small><h3>מיני פנטהאוז 5 חדרים מול הפארק</h3>
       <div class="row"><span>5 חדרים · 135 מ״ר</span><span class="price"><bdi dir="ltr">11,500</bdi><span class="cur">₪ לחודש</span></span></div></a>
   </div>
@@ -212,5 +215,6 @@ if (renderer) {
   frame(); mount.classList.add('live');
 }
 </script>
+<script src="assets/menu.js?v=5"></script>
 </body>
 </html>
