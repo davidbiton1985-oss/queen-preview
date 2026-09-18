@@ -194,7 +194,7 @@ if (renderer) {
 
   let portrait = false, px = 0, py = 0, cx = 0, cy = 0, scrollP = 0;
   const QX = () => (portrait ? 0 : -2.35); // RTL: המלכה בצד שמאל, הטקסט בימין
-  const resize = () => { const w = mount.clientWidth, h = mount.clientHeight; renderer.setSize(w, h, false); camera.aspect = w / h; portrait = camera.aspect < .9; camera.fov = portrait ? 30 : 26; camera.updateProjectionMatrix(); };
+  const resize = () => { const w = mount.clientWidth, h = mount.clientHeight; renderer.setSize(w, h, false); camera.aspect = w / h; portrait = camera.aspect < .9; camera.fov = portrait ? 30 : 26; camera.updateProjectionMatrix(); scene.fog.density = portrait ? .02 : .042; renderer.toneMappingExposure = portrait ? 1.5 : 1.05; /* אותה עכירות למרות המרחק הגדול בפורטרט */ };
   addEventListener('resize', resize, { passive: true }); resize();
   addEventListener('pointermove', (e) => { px = (e.clientX / innerWidth - .5) * 2; py = (e.clientY / innerHeight - .5) * 2; }, { passive: true });
   addEventListener('scroll', () => { scrollP = clamp(scrollY / Math.max(1, hero.offsetHeight), 0, 1); }, { passive: true });
@@ -202,9 +202,9 @@ if (renderer) {
   const clock = new THREE.Clock(); let running = true;
   const frame = () => { if (!running) return; requestAnimationFrame(frame); const t = clock.getElapsedTime();
     cx += (px - cx) * .04; cy += (py - cy) * .04;
-    const qx = QX(); queen.position.x = mirror.position.x = qx; pool.position.set(qx + .8, 10, 2.5); pool.target.position.set(qx, 0, 0);
+    const qx = QX(); queen.position.x = mirror.position.x = qx; pool.position.set(qx + .8, 10, 2.5); pool.target.position.set(qx, 0, 0); fill.position.set(qx - 3.15, 3.6, 5);
     queen.rotation.y = mirror.rotation.y = reduced ? .5 : t * .18;
-    const ang = (portrait ? 0 : .12) + cx * .06 + scrollP * .45, R = (portrait ? 19 : 11.2) - scrollP * 1.6, H = (portrait ? 2.6 : 2.0) - cy * .15 - scrollP * .5;
+    const ang = (portrait ? .365 : .12) + cx * .06 + scrollP * .45, R = (portrait ? 19 : 11.2) - scrollP * 1.6, H = (portrait ? 2.6 : 2.0) - cy * .15 - scrollP * .5;
     const tx = portrait ? 0 : .55, ty = portrait ? 4.2 : 1.62; // נקודת המבט: בפורטרט גבוהה — המלכה יורדת לחצי התחתון
     camera.position.set(tx + Math.sin(ang) * R, H, Math.cos(ang) * R); camera.lookAt(tx, ty, 0);
     renderer.render(scene, camera); };
