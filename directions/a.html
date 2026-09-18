@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>כיוון A — עריכתי · Queen נדל״ן</title>
+<link rel="stylesheet" href="assets/base.css">
+<style>
+  :root { --paper: #FBF8F3; --paper-2: #F3EDE3; --ink: #1F1419; --ink-soft: #5A4A52; --hair: rgba(94, 7, 54, .16); --gutter: max(24px, calc((100vw - 1240px) / 2)); }
+  body { background: var(--paper); color: var(--ink); }
+
+  /* ---------- מסטהד ---------- */
+  .mast { background: var(--burgundy); color: #F6EDE4; position: sticky; inset-block-start: 0; z-index: 50; }
+  .mast-in { display: flex; align-items: center; gap: 2.5rem; min-block-size: 84px; padding-inline: var(--gutter); }
+  .mast img { inline-size: 138px; block-size: auto; }
+  .nav { display: flex; gap: 2.1rem; margin-inline-start: auto; font-size: 1rem; }
+  .nav a { position: relative; padding-block: .4rem; opacity: .92; }
+  .nav a::after { content: ''; position: absolute; inset-inline: 0; inset-block-end: 0; block-size: 1px; background: var(--gold-light); transform: scaleX(0); transform-origin: right; transition: transform .4s var(--ease); }
+  .nav a:hover::after { transform: scaleX(1); }
+  .mast-cta { border: 1px solid rgba(212, 185, 120, .7); color: var(--gold-light); padding: .6rem 1.4rem; font-weight: 600; transition: background .3s, color .3s; }
+  .mast-cta:hover { background: var(--gold-light); color: var(--ink-burgundy); }
+  .burger { display: none; inline-size: 44px; block-size: 44px; border: 1px solid rgba(212, 185, 120, .55); background: none; position: relative; margin-inline-start: auto; }
+  .burger::before, .burger::after { content: ''; position: absolute; inset-inline: 12px; block-size: 1.5px; background: #F6EDE4; }
+  .burger::before { inset-block-start: 17px; } .burger::after { inset-block-end: 17px; }
+
+  /* ---------- הירו ---------- */
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.22fr); min-block-size: calc(100vh - 84px); position: relative; }
+  .hero-text { padding-inline: var(--gutter) 4.5rem; padding-block: 5rem 4rem; display: grid; align-content: center; gap: 1.6rem; position: relative; }
+  /* מוטיב הלוח — סימן מים עדין בפינה */
+  .hero-text::before {
+    content: ''; position: absolute; inset-block-start: 0; inset-inline-start: 0; inline-size: 220px; block-size: 220px; opacity: .55; pointer-events: none;
+    background: conic-gradient(var(--paper-2) 25%, transparent 0 50%, var(--paper-2) 0 75%, transparent 0) 0 0 / 110px 110px;
+    -webkit-mask-image: linear-gradient(135deg, black, transparent 70%); mask-image: linear-gradient(135deg, black, transparent 70%);
+  }
+  .kicker { display: inline-flex; align-items: center; gap: .7rem; color: var(--gold-ink); font-weight: 600; font-size: .95rem; }
+  .kicker::before { content: ''; inline-size: 34px; block-size: 1px; background: var(--gold); }
+  h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(2.5rem, 4.5vw, 4.5rem); line-height: 1.08; color: var(--burgundy); }
+  .lead { font-size: 1.2rem; line-height: 1.6; color: var(--ink-soft); max-inline-size: 36ch; }
+  .cta-row { display: flex; align-items: center; gap: 1.8rem; flex-wrap: wrap; margin-block-start: .6rem; }
+  .btn { display: inline-flex; align-items: center; gap: .6rem; padding: 1rem 2.2rem; background: var(--burgundy); color: #F6EDE4; font-weight: 600; transition: background .35s var(--ease); }
+  .btn:hover { background: var(--burgundy-deep); }
+  .link { display: inline-flex; align-items: center; gap: .55rem; font-weight: 600; color: var(--burgundy); border-block-end: 1px solid var(--gold); padding-block-end: .2rem; transition: gap .3s var(--ease); }
+  .link:hover { gap: .9rem; }
+  .creds { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.2rem; margin-block-start: 1.6rem; padding-block-start: 1.4rem; border-block-start: 1px solid var(--hair); font-size: .95rem; color: var(--ink-soft); }
+  .creds b { font-family: var(--serif); font-weight: 500; font-size: 1.15rem; color: var(--burgundy); }
+  .creds i { inline-size: 1px; block-size: 16px; background: var(--hair); }
+  .creds strong { font-family: var(--serif); font-weight: 500; color: var(--ink); }
+
+  .hero-photo { position: relative; min-block-size: 560px; }
+  .photo-clip { position: absolute; inset: 0; overflow: hidden; }
+  .photo-clip img { position: absolute; inset: -6% 0; inline-size: 100%; block-size: 112%; object-fit: cover; will-change: transform; animation: wipe 1.3s var(--ease) both; }
+  @keyframes wipe { from { clip-path: inset(0 0 0 100%); transform: scale(1.06); } to { clip-path: inset(0); transform: none; } }
+  .photo-clip::after { content: ''; position: absolute; inset: 22px; border: 1px solid rgba(255, 255, 255, .65); pointer-events: none; }
+  .tagline { position: absolute; inset-block-start: 38px; inset-inline-end: 38px; z-index: 2; background: rgba(31, 20, 25, .7); color: #F6EDE4; font-size: .82rem; padding: .3rem .75rem; }
+  .feature {
+    position: absolute; z-index: 3; inset-block-end: 56px; inset-inline-start: -64px; inline-size: min(360px, 80%);
+    background: var(--paper); padding: 1.6rem 1.8rem; box-shadow: 0 30px 60px -30px rgba(31, 20, 25, .45);
+    border-block-start: 2px solid var(--gold); animation: rise 1s .5s var(--ease) both;
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+  .feature small { color: var(--gold-ink); font-weight: 600; font-size: .88rem; }
+  .feature .price { font-family: var(--serif); font-weight: 500; font-size: 2rem; color: var(--burgundy); line-height: 1.2; font-variant-numeric: lining-nums tabular-nums; }
+  .feature p { color: var(--ink-soft); font-size: .95rem; }
+  .feature .link { margin-block-start: .9rem; font-size: .95rem; }
+  .fade-up > * { animation: rise .9s var(--ease) both; }
+  .fade-up > :nth-child(2) { animation-delay: .08s; } .fade-up > :nth-child(3) { animation-delay: .16s; }
+  .fade-up > :nth-child(4) { animation-delay: .24s; } .fade-up > :nth-child(5) { animation-delay: .32s; }
+
+  /* ---------- מפריד ---------- */
+  .orn { display: flex; align-items: center; justify-content: center; gap: 1.2rem; color: var(--gold); padding-block: 4.5rem 0; }
+  .orn::before, .orn::after { content: ''; inline-size: min(180px, 22vw); block-size: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+  .orn::after { transform: scaleX(-1); }
+  .orn svg { inline-size: 22px; block-size: 30px; fill: currentColor; }
+
+  /* ---------- נכסים ---------- */
+  .sec { padding-inline: var(--gutter); padding-block: 3.5rem 6.5rem; }
+  .sec-head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-block-end: 3rem; }
+  h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(2rem, 3.6vw, 3.1rem); line-height: 1.12; color: var(--burgundy); margin-block-start: .7rem; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4rem; }
+  .card { display: grid; gap: 1.1rem; }
+  .card figure { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--paper-2); }
+  .card img { inline-size: 100%; block-size: 100%; object-fit: cover; transition: transform 1.1s var(--ease); }
+  .card:hover img { transform: scale(1.05); }
+  .card figcaption { position: absolute; inset-block-end: 10px; inset-inline-end: 10px; background: rgba(31, 20, 25, .7); color: #F6EDE4; font-size: .78rem; padding: .2rem .6rem; }
+  .meta { display: flex; justify-content: space-between; align-items: baseline; font-size: .92rem; color: var(--gold-ink); font-weight: 600; }
+  .meta span:last-child { color: var(--ink-soft); font-weight: 400; }
+  .card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.45rem; line-height: 1.25; }
+  .specs { color: var(--ink-soft); font-size: .98rem; }
+  .card-foot { display: flex; justify-content: space-between; align-items: center; border-block-start: 1px solid var(--hair); padding-block-start: 1rem; }
+  .card-foot .price { font-family: var(--serif); font-weight: 500; font-size: 1.65rem; color: var(--burgundy); font-variant-numeric: lining-nums tabular-nums; }
+
+  /* ---------- הצהרה ---------- */
+  .statement { background: var(--burgundy); color: #F6EDE4; display: grid; grid-template-columns: 1.1fr 1fr; }
+  .st-text { padding-inline: var(--gutter) 5rem; padding-block: 7rem; display: grid; gap: 1.8rem; align-content: center; }
+  .st-text .kicker { color: var(--gold-light); }
+  .st-text blockquote { margin: 0; font-family: var(--serif); font-weight: 300; font-size: clamp(1.9rem, 3.2vw, 2.9rem); line-height: 1.25; }
+  .st-text p { color: rgba(246, 237, 228, .82); max-inline-size: 44ch; }
+  .btn-gold { background: var(--gold); color: var(--ink-burgundy); justify-self: start; }
+  .btn-gold:hover { background: var(--gold-light); }
+  .st-photo { position: relative; min-block-size: 520px; }
+  .st-photo img { position: absolute; inset: 0; inline-size: 100%; block-size: 100%; object-fit: cover; }
+  .st-photo::after { content: ''; position: absolute; inset: 22px; border: 1px solid rgba(212, 185, 120, .7); }
+  footer { padding: 2.2rem var(--gutter) 5.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: .9rem; color: var(--ink-soft); }
+
+  @media (max-width: 1000px) {
+    .nav, .mast-cta { display: none; } .burger { display: block; }
+    .hero { grid-template-columns: 1fr; min-block-size: 0; }
+    .hero-text { padding: 3.2rem 24px 2.6rem; }
+    .hero-photo { min-block-size: 0; }
+    .photo-clip { position: relative; aspect-ratio: 4 / 4.2; } .photo-clip::after { inset: 14px; }
+    .tagline { inset-block-start: 26px; inset-inline-end: 26px; }
+    .feature { position: relative; inset: auto; margin: -72px 24px 0; inline-size: auto; }
+    .hero { padding-block-end: 1rem; }
+    .grid { grid-template-columns: 1fr; gap: 3rem; }
+    .sec-head { flex-direction: column; align-items: start; }
+    .statement { grid-template-columns: 1fr; } .st-text { padding: 4.5rem 24px; } .st-photo { min-block-size: 0; aspect-ratio: 4 / 3; }
+  }
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="mast-in">
+    <a href="#"><img src="assets/logo-queen.png" alt="Queen Real Estate" width="301" height="137"></a>
+    <nav class="nav" aria-label="ניווט ראשי">
+      <a href="#listings">דירות למכירה</a><a href="#listings">דירות להשכרה</a><a href="#about">הכירו את <span lang="en">Queen</span></a><a href="#about">לקוחות מספרים</a><a href="#about">צרו קשר</a>
+    </nav>
+    <a class="mast-cta" href="#about">מוכרים דירה?</a>
+    <button class="burger" aria-label="תפריט"></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text fade-up">
+    <p class="kicker">רעננה · תיווך בוטיק</p>
+    <h1>המהלך הנכון<br>לבית הבא שלכם</h1>
+    <p class="lead">הילה ושמרית מלוות אתכם אישית — מהשיחה הראשונה ועד מסירת המפתחות. מעט נכסים, תשומת לב מלאה לכל אחד מהם.</p>
+    <div class="cta-row">
+      <a class="btn" href="#about">כמה שווה הדירה שלי?</a>
+      <a class="link" href="#listings">לנכסים שלנו <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 8H2M6.5 3.5 2 8l4.5 4.5"/></svg></a>
+    </div>
+    <div class="creds"><b>הילה ושמרית</b><span>מתווכות מורשות</span><i></i><span>כתבו עלינו: <strong>TheMarker</strong> · <strong>רעננה ניוז</strong></span></div>
+  </div>
+  <div class="hero-photo">
+    <div class="photo-clip"><img id="heroImg" src="assets/img/living-stairs-1600.jpg" alt="סלון מואר עם מדרגות עץ" width="1600" height="1028"></div>
+    <span class="tagline">צילום להמחשה</span>
+    <aside class="feature">
+      <small>נכס נבחר · אחוזה, רעננה</small>
+      <div class="price"><bdi dir="ltr">4,250,000</bdi><span class="cur">₪</span></div>
+      <p>5 חדרים · 128 מ״ר · קומה 3 מתוך 6 · משופצת אדריכלית</p>
+      <a class="link" href="#listings">לפרטי הנכס <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 8H2M6.5 3.5 2 8l4.5 4.5"/></svg></a>
+    </aside>
+  </div>
+</section>
+
+<div class="orn" aria-hidden="true"><svg viewBox="0 0 48 64"><circle cx="12" cy="10" r="3"/><circle cx="24" cy="6" r="3"/><circle cx="36" cy="10" r="3"/><path d="M11 14l7 12h12l7-12-7 7-6-11-6 11zM19 28h10l2 14H17zM14 44h20l3 10H11zM8 56h32v6H8z"/></svg></div>
+
+<section class="sec" id="listings">
+  <div class="sec-head">
+    <div><p class="kicker">נכסים נבחרים</p><h2>נכסים בשיווק בלעדי</h2></div>
+    <a class="link" href="#">לכל הנכסים <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 8H2M6.5 3.5 2 8l4.5 4.5"/></svg></a>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <figure><img src="assets/img/living-white-800.jpg" alt="" loading="lazy"><figcaption>צילום להמחשה</figcaption></figure>
+      <div class="meta"><span>נווה זמר</span><span>בלעדיות</span></div>
+      <h3>דירת גן 4 חדרים בנווה זמר</h3>
+      <p class="specs">4 חדרים · 105 מ״ר · קומת גן · ממ״ד</p>
+      <div class="card-foot"><span class="price"><bdi dir="ltr">3,980,000</bdi><span class="cur">₪</span></span><a class="link" href="#">לפרטים</a></div>
+    </article>
+    <article class="card">
+      <figure><img src="assets/img/kitchen-island-800.jpg" alt="" loading="lazy"><figcaption>צילום להמחשה</figcaption></figure>
+      <div class="meta"><span>רעננה הירוקה</span><span>בלעדיות</span></div>
+      <h3>פנטהאוז דופלקס 6 חדרים</h3>
+      <p class="specs">6 חדרים · 185 מ״ר · קומה 7 מתוך 8 · מרפסת גג</p>
+      <div class="card-foot"><span class="price"><bdi dir="ltr">7,650,000</bdi><span class="cur">₪</span></span><a class="link" href="#">לפרטים</a></div>
+    </article>
+    <article class="card">
+      <figure><img src="assets/img/bedroom-elegant-800.jpg" alt="" loading="lazy"><figcaption>צילום להמחשה</figcaption></figure>
+      <div class="meta"><span>לב הפארק</span><span>להשכרה</span></div>
+      <h3>מיני פנטהאוז 5 חדרים מול הפארק</h3>
+      <p class="specs">5 חדרים · 135 מ״ר · קומה 9 מתוך 10</p>
+      <div class="card-foot"><span class="price"><bdi dir="ltr">11,500</bdi><span class="cur">₪ לחודש</span></span><a class="link" href="#">לפרטים</a></div>
+    </article>
+  </div>
+</section>
+
+<section class="statement" id="about">
+  <div class="st-text">
+    <p class="kicker">למה Queen</p>
+    <blockquote>מי שפוגשת אתכם —<br>מלווה אתכם עד המפתחות.</blockquote>
+    <p>אין אצלנו ״נציג מטעם״. הילה ושמרית איתכם בעצמן: הערכת שווי כנה, הכנה וצילום מקצועי, שיווק לקהל המדויק, ומשא ומתן עם נתונים וקור רוח.</p>
+    <a class="btn btn-gold" href="#">לתיאום שיחת היכרות</a>
+  </div>
+  <div class="st-photo"><img src="assets/img/bedroom-elegant-800.jpg" alt="" loading="lazy"></div>
+</section>
+<footer><span>© 2026 · Queen נדל״ן — תיווך ברעננה</span><span>מוקאפ כיוון עיצובי · התוכן והצילומים להמחשה</span></footer>
+
+<nav class="dir-switch" aria-label="מעבר בין כיוונים"><a href="index.html">↩ בחירה</a><a href="a.html" aria-current="page">A · עריכתי</a><a href="b.html">B · תכשיט כהה</a><a href="c.html">C · מודרני</a></nav>
+<script>
+  // פרלקסה עדינה על צילום ההירו
+  const img = document.getElementById('heroImg');
+  if (img && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let raf = 0;
+    addEventListener('scroll', () => { if (raf) return; raf = requestAnimationFrame(() => { raf = 0; img.style.translate = `0 ${Math.min(scrollY, 900) * 0.06}px`; }); }, { passive: true });
+  }
+</script>
+</body>
+</html>
