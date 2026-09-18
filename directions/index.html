@@ -67,7 +67,7 @@
   // התאמת קנה המידה של התצוגות המוקטנות לרוחב הכרטיס
   // במסך צר מציגים את גרסת הטלפון של כל כיוון (390px), במסך רחב את גרסת המחשב (1440px)
   const fit = () => document.querySelectorAll('.frame').forEach((f) => {
-    const fr = f.querySelector('iframe'), w = f.clientWidth < 520 ? 390 : 1440, sc = f.clientWidth / w;
+    const fr = f.querySelector('iframe'), w = matchMedia('(max-width: 560px)').matches ? 390 : 1440, sc = f.clientWidth / w;
     fr.style.inlineSize = w + 'px'; fr.style.blockSize = Math.ceil(f.clientHeight / sc) + 'px';
     f.style.setProperty('--s', sc.toFixed(4));
   });
