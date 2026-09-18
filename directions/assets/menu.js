@@ -8,7 +8,7 @@ if (self !== top) document.documentElement.classList.add('embedded');
   const sheet = document.createElement('div');
   sheet.className = 'sheet'; sheet.id = 'sheet';
   sheet.setAttribute('role', 'dialog'); sheet.setAttribute('aria-modal', 'true'); sheet.setAttribute('aria-label', 'תפריט');
-  sheet.innerHTML = '<div class="sheet-top"><img src="assets/logo-queen.png" alt="Queen Real Estate" width="301" height="137"><button class="sheet-close" type="button" aria-label="סגירת התפריט"></button></div>'
+  sheet.innerHTML = '<div class="sheet-top"><span class="logo-lockup" dir="ltr"><img src="assets/logo-queen-mark.png" alt="Queen" width="243" height="72"><span class="logo-tag" lang="en">REAL ESTATE</span></span><button class="sheet-close" type="button" aria-label="סגירת התפריט"></button></div>'
     + '<nav class="sheet-nav" aria-label="ניווט ראשי"></nav>'
     + '<div class="sheet-foot"><a class="sheet-cta" href="#about">מוכרים דירה? לשיחת היכרות</a>'
     + '<div class="sheet-contact"><a href="tel:+972500000000" dir="ltr">050-000-0000</a><a href="#about">וואטסאפ</a><a href="#" lang="en" dir="ltr">English</a></div></div>';

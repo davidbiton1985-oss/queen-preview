@@ -45,7 +45,7 @@ button { font: inherit; cursor: pointer; }
   visibility: hidden; opacity: 0; transition: opacity .35s var(--ease), visibility 0s .35s; }
 .sheet.open { visibility: visible; opacity: 1; transition: opacity .35s var(--ease); }
 .sheet-top { display: flex; align-items: center; justify-content: space-between; min-block-size: 76px; }
-.sheet-top img { inline-size: 118px; }
+.sheet-top { --logo-w: 118px; }
 .sheet-close { inline-size: 44px; block-size: 44px; background: none; border: 0; color: inherit; position: relative; }
 .sheet-close::before, .sheet-close::after { content: ''; position: absolute; inset-inline: 9px; inset-block-start: 21px; block-size: 1.5px; background: currentColor; rotate: 45deg; }
 .sheet-close::after { rotate: -45deg; }
@@ -60,3 +60,8 @@ button { font: inherit; cursor: pointer; }
 .sheet-contact { display: flex; justify-content: center; gap: 1.6rem; font-size: .95rem; opacity: .82; }
 html.embedded .dir-switch { display: none; }
 html.menu-open { overflow: hidden; } html.menu-open .dir-switch { display: none; }
+
+/* ---------- לוגו כ-lockup: סימן QUEEN המקורי + REAL ESTATE כטקסט חי וקריא (בקובץ המקורי השורה הזו בגובה 4px בגודל הדר) ---------- */
+.logo-lockup { display: inline-grid; justify-items: center; gap: calc(var(--logo-w, 132px) * .05); inline-size: var(--logo-w, 132px); vertical-align: middle; }
+.logo-lockup img { inline-size: 100%; block-size: auto; }
+.logo-tag { font-family: var(--sans); font-weight: 500; font-size: calc(var(--logo-w, 132px) * .092); line-height: 1; letter-spacing: .34em; margin-inline-end: -.34em; white-space: nowrap; color: #F6EDE4; } /* letter-spacing: לטינית uppercase בלבד */

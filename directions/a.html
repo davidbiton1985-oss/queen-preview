@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>כיוון A — עריכתי · Queen נדל״ן</title>
-<link rel="stylesheet" href="assets/base.css?v=5">
+<link rel="stylesheet" href="assets/base.css?v=6">
 <style>
   :root { --paper: #FBF8F3; --paper-2: #F3EDE3; --ink: #1F1419; --ink-soft: #5A4A52; --hair: rgba(94, 7, 54, .16); --gutter: max(24px, calc((100vw - 1240px) / 2)); }
   body { background: var(--paper); color: var(--ink); }
@@ -16,7 +16,7 @@
   .util-end { display: flex; align-items: center; gap: 1.7rem; } .util a { transition: color .3s; } .util a:hover { color: var(--gold-light); }
   .mast { background: var(--burgundy); color: #F6EDE4; position: sticky; inset-block-start: 0; z-index: 50; border-block-end: 1px solid rgba(212, 185, 120, .4); }
   .mast-in { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 2rem; min-block-size: 84px; padding-inline: var(--gutter); }
-  .brand { justify-self: center; } .brand img { inline-size: 150px; block-size: auto; }
+  .brand { justify-self: center; } .brand { --logo-w: 150px; }
   .nav { display: flex; gap: 2.1rem; font-size: 1rem; }
   .nav-end { display: flex; align-items: center; gap: 2.1rem; justify-self: end; }
   .nav a { position: relative; padding-block: .4rem; opacity: .92; }
@@ -24,7 +24,7 @@
   .nav a:hover::after { transform: scaleX(1); }
   .mast-cta { border: 1px solid rgba(212, 185, 120, .7); color: var(--gold-light); padding: .6rem 1.4rem; font-weight: 600; transition: background .3s, color .3s; }
   .mast-cta:hover { background: var(--gold-light); color: var(--ink-burgundy); }
-  @media (max-width: 1140px) { .util, .nav, .nav-end { display: none; } .mast-in { display: flex; min-block-size: 76px; } .brand img { inline-size: 124px; } .burger { display: inline-flex; } }
+  @media (max-width: 1140px) { .util, .nav, .nav-end { display: none; } .mast-in { display: flex; min-block-size: 76px; } .brand { --logo-w: 124px; } .burger { display: inline-flex; } }
 
   /* ---------- הירו ---------- */
   .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.22fr); min-block-size: calc(100vh - 84px); position: relative; }
@@ -124,7 +124,7 @@
 <header class="mast">
   <div class="mast-in">
     <nav class="nav" aria-label="ניווט ראשי"><a href="#listings">דירות למכירה</a><a href="#listings">דירות להשכרה</a><a href="#about">הכירו את <span lang="en">Queen</span></a></nav>
-    <a class="brand" href="#"><img src="assets/logo-queen.png" alt="Queen Real Estate" width="301" height="137"></a>
+    <a class="brand" href="#"><span class="logo-lockup" dir="ltr"><img src="assets/logo-queen-mark.png" alt="Queen" width="243" height="72"><span class="logo-tag" lang="en">REAL ESTATE</span></span></a>
     <div class="nav-end"><nav class="nav" aria-label="ניווט משני"><a href="#about">לקוחות מספרים</a><a href="#about">צרו קשר</a></nav><a class="mast-cta" href="#about">מוכרים דירה?</a></div>
     <button class="burger" type="button" aria-label="פתיחת התפריט" aria-expanded="false" aria-controls="sheet"><span>תפריט</span><i aria-hidden="true"></i></button>
   </div>
@@ -205,6 +205,6 @@
     addEventListener('scroll', () => { if (raf) return; raf = requestAnimationFrame(() => { raf = 0; img.style.translate = `0 ${Math.min(scrollY, 900) * 0.06}px`; }); }, { passive: true });
   }
 </script>
-<script src="assets/menu.js?v=5"></script>
+<script src="assets/menu.js?v=6"></script>
 </body>
 </html>

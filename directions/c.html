@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>כיוון C — מודרני · Queen נדל״ן</title>
-<link rel="stylesheet" href="assets/base.css?v=5">
+<link rel="stylesheet" href="assets/base.css?v=6">
 <style>
   :root { --bg: #FFFFFF; --bg-2: #F8F3F6; --ink: #1B1020; --ink-soft: #62536A; --line: #ECE3E9; --blush: #F3E6EE; --gutter: max(20px, calc((100vw - 1200px) / 2)); --sh: 0 24px 60px -28px rgba(66, 4, 31, .35); }
   body { background: var(--bg); color: var(--ink); }
@@ -14,7 +14,7 @@
   .top { position: sticky; inset-block-start: 12px; z-index: 50; margin-block-start: 12px; padding-inline: var(--gutter); }
   .top-in { display: flex; align-items: center; gap: 1.2rem; min-block-size: 68px; padding-inline: .6rem; background: rgba(255, 255, 255, .97); border: 1px solid var(--line); border-radius: 999px; box-shadow: 0 18px 40px -26px rgba(66, 4, 31, .4); }
   .logo { background: var(--burgundy); border-radius: 999px; padding: .55rem 1.2rem; display: block; }
-  .logo img { inline-size: 92px; block-size: auto; }
+  .logo { --logo-w: 96px; line-height: 0; }
   .nav { display: flex; gap: .3rem; margin-inline: auto; font-weight: 600; font-size: .98rem; }
   .nav a { padding: .5rem .9rem; border-radius: 999px; transition: background .25s; } .nav a:hover { background: var(--bg-2); }
   .pill { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border-radius: 999px; padding: .8rem 1.6rem; font-weight: 700; border: 0; transition: transform .25s var(--ease), box-shadow .25s, background .25s; }
@@ -114,7 +114,7 @@
 <body>
 <header class="top">
   <div class="top-in">
-    <a class="logo" href="#"><img src="assets/logo-queen.png" alt="Queen Real Estate" width="301" height="137"></a>
+    <a class="logo" href="#"><span class="logo-lockup" dir="ltr"><img src="assets/logo-queen-mark.png" alt="Queen" width="243" height="72"><span class="logo-tag" lang="en">REAL ESTATE</span></span></a>
     <nav class="nav" aria-label="ניווט ראשי"><a href="#listings">למכירה</a><a href="#listings">להשכרה</a><a href="#process">איך זה עובד</a><a href="#about">הכירו את <span lang="en">Queen</span></a><a href="#about">צרו קשר</a></nav>
     <a class="pill pill-main" href="#about">מוכרים דירה?</a>
     <button class="burger" type="button" aria-label="פתיחת התפריט" aria-expanded="false" aria-controls="sheet"><span>תפריט</span><i aria-hidden="true"></i></button>
@@ -200,6 +200,6 @@
   const chips = [...document.querySelectorAll('#chips button')];
   chips.forEach((c) => c.addEventListener('click', () => { chips.forEach((x) => x.setAttribute('aria-pressed', String(x === c))); document.querySelectorAll('.card').forEach((card) => { card.hidden = !(c.dataset.f === 'all' || card.dataset.t === c.dataset.f); }); }));
 </script>
-<script src="assets/menu.js?v=5"></script>
+<script src="assets/menu.js?v=6"></script>
 </body>
 </html>
