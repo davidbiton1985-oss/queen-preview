@@ -1,0 +1,2 @@
+function h(n,s,l){if(!(n>0)||!(s>0)||!(l>=0)||l>50)return null;const t=Math.round(s*12),o=l/1200,e=o===0?n/t:n*o*(1+o)**t/((1+o)**t-1),r=e*t;return{monthly:e,total:r,interest:r-n,n:t}}function d(n,s,l=0,t=0,o=0){if(!(n>0)||!(s>0))return null;const e=l>0?l:0,r=Math.min(Math.max(t||0,0),12),u=o>0?o:0,a=s*12,i=s*(12-r),c=i-e;return{gross:a/n*100,net:c/(n+u)*100,annualNet:c,monthlyNet:c/12,collected:i,invested:n+u}}export{d as r,h as s};
+//# sourceMappingURL=calc-math.0YHMCODL.js.map

@@ -97,6 +97,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/about/"/>
   </url>
   <url>
+    <loc>https://queen-nadlan.co.il/press/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/press/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/press/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/press/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/en/press/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/press/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/press/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/press/"/>
+  </url>
+  <url>
     <loc>https://queen-nadlan.co.il/contact/</loc>
     <lastmod>2026-09-26</lastmod>
     <priority>0.7</priority>
@@ -111,6 +127,38 @@
     <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/contact/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/contact/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/tools/mortgage/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/tools/mortgage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/tools/mortgage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/tools/mortgage/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/en/tools/mortgage/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/tools/mortgage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/tools/mortgage/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/tools/mortgage/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/tools/yield/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/tools/yield/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/tools/yield/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/tools/yield/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/en/tools/yield/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/tools/yield/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/tools/yield/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/tools/yield/"/>
   </url>
   <url>
     <loc>https://queen-nadlan.co.il/accessibility/</loc>
@@ -143,5 +191,101 @@
     <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/privacy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/privacy/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/p/ahuza-5r-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/ahuza-5r-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/ahuza-5r-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/ahuza-5r-demo/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/en/p/ahuza-5r-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/ahuza-5r-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/ahuza-5r-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/ahuza-5r-demo/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/p/kiryat-ganim-4r-rent-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/kiryat-ganim-4r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/kiryat-ganim-4r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/kiryat-ganim-4r-rent-demo/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/en/p/kiryat-ganim-4r-rent-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/kiryat-ganim-4r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/kiryat-ganim-4r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/kiryat-ganim-4r-rent-demo/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/p/lev-hapark-5r-rent-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/lev-hapark-5r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/lev-hapark-5r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/lev-hapark-5r-rent-demo/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/en/p/lev-hapark-5r-rent-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/lev-hapark-5r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/lev-hapark-5r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/lev-hapark-5r-rent-demo/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/p/neot-sade-3r-rent-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/neot-sade-3r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/neot-sade-3r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/neot-sade-3r-rent-demo/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/en/p/neot-sade-3r-rent-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/neot-sade-3r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/neot-sade-3r-rent-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/neot-sade-3r-rent-demo/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/p/neve-zemer-4r-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/neve-zemer-4r-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/neve-zemer-4r-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/neve-zemer-4r-demo/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/en/p/neve-zemer-4r-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/neve-zemer-4r-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/neve-zemer-4r-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/neve-zemer-4r-demo/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/p/raanana-hayeruka-6r-penthouse-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/raanana-hayeruka-6r-penthouse-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/raanana-hayeruka-6r-penthouse-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/raanana-hayeruka-6r-penthouse-demo/"/>
+  </url>
+  <url>
+    <loc>https://queen-nadlan.co.il/en/p/raanana-hayeruka-6r-penthouse-demo/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://queen-nadlan.co.il/p/raanana-hayeruka-6r-penthouse-demo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://queen-nadlan.co.il/en/p/raanana-hayeruka-6r-penthouse-demo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://queen-nadlan.co.il/p/raanana-hayeruka-6r-penthouse-demo/"/>
   </url>
 </urlset>
