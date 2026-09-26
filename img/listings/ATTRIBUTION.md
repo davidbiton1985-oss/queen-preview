@@ -46,3 +46,6 @@ progressive JPEGs, quality 67–82.
 2. Point `media.images[].src` / `.small` at them and set `"illustrative": false` on the image
    (the chip disappears only when the image is explicitly marked non-illustrative).
 3. Write honest `alt_he` / `alt_en` for each.
+
+## Textures
+- `public/stage/oak/*` — "Oak Veneer 01" by Poly Haven (https://polyhaven.com/a/oak_veneer_01), CC0.
