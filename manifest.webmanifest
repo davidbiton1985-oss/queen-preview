@@ -1,0 +1,17 @@
+{
+  "name": "Queen נדל״ן — תיווך ברעננה",
+  "short_name": "Queen",
+  "description": "משרד תיווך בוטיק ברעננה — דירות למכירה ולהשכרה. הילה ושמרית.",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#5E0736",
+  "theme_color": "#5E0736",
+  "icons": [
+    { "src": "/og/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/og/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
