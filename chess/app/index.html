@@ -10,19 +10,21 @@
        user-scalable / maximum-scale are deliberately NOT set: pinch-zoom is an accessibility right, and the
                            stage re-fits from visualViewport anyway (WCAG 1.4.4). -->
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
-  <meta name="theme-color" content="#5E0736">
+  <meta name="theme-color" content="#15171A">
+  <meta name="description" content="Biton 3D Chess — a real board, on any screen">
   <!-- the only way an iPhone ever loses Safari's address bar and tab strip is a standalone launch: the
-       manifest makes "Add to Home Screen" open the game with no browser chrome at all. -->
+       manifest makes "Add to Home Screen" open the game with no browser chrome at all.
+       %EDITION_*% / manifest / brand/* come from the edition's meta.json (vite.config.ts editionIdentity). -->
   <link rel="manifest" href="./manifest.webmanifest">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Queen Chess">
+  <meta name="apple-mobile-web-app-title" content="Biton Chess">
   <link rel="apple-touch-icon" href="./brand/icon-192.png">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%235E0736'/%3E%3Cpath d='M9 25h14l-2-4 2-10-4 5-3-8-3 8-4-5 2 10z' fill='%23AB8C4F'/%3E%3C/svg%3E">
-  <title>Queen Chess · שחמט עם המלכה</title>
-  <script type="module" crossorigin src="./assets/index-anGrpEK0.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Boms_Kkd.css">
+  <link rel="icon" type="image/svg+xml" href="./brand/favicon.svg">
+  <title>Biton 3D Chess · ביטון שחמט תלת־ממד</title>
+  <script type="module" crossorigin src="./assets/index-CnkUI6tT.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CfnuXCYP.css">
 </head>
 <body>
   <div id="app"></div>
