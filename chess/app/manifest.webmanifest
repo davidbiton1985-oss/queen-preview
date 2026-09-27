@@ -1,7 +1,7 @@
 {
-  "name": "Biton 3D Chess",
-  "short_name": "Biton Chess",
-  "description": "Biton 3D Chess — a real board, on any screen",
+  "name": "Koala Chess",
+  "short_name": "Koala Chess",
+  "description": "Koala Chess — a real board, on any screen",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
